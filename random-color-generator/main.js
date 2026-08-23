@@ -4,6 +4,8 @@ const hexContainer = document.querySelector(".hex-container");
 
 const rgbContainer = document.querySelector(".rgb-container");
 
+const rgbColorValue = document.querySelector(".rgb-color-value");
+
 const red = document.getElementById("red");
 const blue = document.getElementById("blue");
 const green = document.getElementById("green");
@@ -24,6 +26,7 @@ hexGenBtn.addEventListener("click", () => {
 
 const updateColor = () => {
   rgbContainer.style.backgroundColor = `rgb(${red.value}, ${green.value}, ${blue.value})`;
+  rgbColorValue.textContent = `rgb(${red.value}, ${green.value}, ${blue.value})`;
 };
 
 red.addEventListener("input", updateColor);

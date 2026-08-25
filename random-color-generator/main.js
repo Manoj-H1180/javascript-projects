@@ -10,6 +10,9 @@ const red = document.getElementById("red");
 const blue = document.getElementById("blue");
 const green = document.getElementById("green");
 
+const hexCopyBtn = document.querySelector(".hex-copy-to-clipboard");
+const rgbCopyBtn = document.querySelector(".rgb-copy-to-clipboard");
+
 hexGenBtn.addEventListener("click", () => {
   let chatSet = "0123456789ABCDEF";
   let generatedHexColorOutput = "";
@@ -32,3 +35,15 @@ const updateColor = () => {
 red.addEventListener("input", updateColor);
 green.addEventListener("input", updateColor);
 blue.addEventListener("input", updateColor);
+
+hexCopyBtn.addEventListener("click", () => {
+  alert(`${hexColorValue.textContent} Color Copied to Clipboard`);
+  navigator.clipboard.writeText(hexColorValue.textContent);
+});
+
+rgbCopyBtn.addEventListener("click", () => {
+  alert(
+    `rgb(${red.value},${green.value},${blue.value}) Color Copied to Clipboard`,
+  );
+  navigator.clipboard.writeText(hexColorValue.textContent);
+});

@@ -4,13 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./index.css" />
-    <title>Document</title>
+    <title>Random Color Generator</title>
   </head>
   <body>
     <div class="random-color-generator-container">
       <div class="hex-container">
         <p class="hex-color-value">#ffffff</p>
         <button class="hex-gen-button">Create Hex Color</button>
+        <button class="hex-copy-to-clipboard">Copy to Clipboard</button>
       </div>
       <div class="rgb-container">
         <p class="rgb-color-value">rgb(255,255,255)</p>
@@ -26,6 +27,7 @@
           <label for="blue">Blue</label>
           <input type="range" min="0" max="255" value="0" id="blue" />
         </div>
+        <button class="rgb-copy-to-clipboard">Copy To Clipboard</button>
       </div>
     </div>
     <script src="./main.js"></script>

@@ -1,0 +1,49 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  padding: 15px;
+}
+
+.star-container {
+  position: absolute;
+  width: 100vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.rating-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.fa-star-0::before {
+  content: "\f006";
+  font-size: 50px;
+}
+
+.selected-rating-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+}
+
+.fa-star {
+  cursor: pointer;
+}
+
+.fa-star::before {
+  content: "\f005";
+  color: rgb(197, 197, 21);
+  font-size: 50px;
+}
